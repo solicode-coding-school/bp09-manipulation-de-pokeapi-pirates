@@ -1,0 +1,107 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url("img/pexels-saturnus99-11188542.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+    padding: 10px;
+    width: 100%; 
+}
+
+.item {
+    background: transparent;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.item:hover {
+    background-color: #48ff64c9;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.back-link {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+    .item {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .back-link {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .container {
+        grid-template-columns: 1fr; 
+        gap: 8px;
+    }
+
+    .item {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .back-link {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    a {
+        font-size: 12px;
+    }
+}
